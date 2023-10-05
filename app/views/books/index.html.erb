@@ -4,7 +4,7 @@
     <th>Title</th>
     <th>Body</th>
   </tr>
-  <%@books.each do |book|%>
+  <% @books.each do |book|%>
   <tr>
     <td><%=book.title%></td>
     <td><%=book.body%></td>
@@ -19,7 +19,7 @@
 <%if @book.errors.any?%>
 <%=@book.errors.count%>errors prohibited this book from being saved:
 <ul>
-  <%@book.errors.full_messages.each do |message|%>
+  <% @book.errors.full_messages.each do |message| %>
   <li><%=message%></li>
   <%end%>
   </ul>
